@@ -1,8 +1,8 @@
 <?php  
 
 class Person {
-  public $name;
-  public $age;
+  private $name;
+  private $age;
   
   public function __construct($name)
   {
@@ -24,9 +24,11 @@ class Person {
 }
 
 $john = new Person('John Doe');
-$john->setAge(30);
 
-var_dump($john);
+$john->age(30);// You'll get an error because the variable is set to private
 
+var_dump($john->age; 
 
-var_dump($john->getAge());
+// Private methods means method can only be accessed within its class. 
+
+// Protected methods can be extended to subclasses. So a child class has the ability to access protected classes.  
