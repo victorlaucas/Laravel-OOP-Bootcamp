@@ -29,6 +29,8 @@ $john->age(30);// You'll get an error because the variable is set to private
 
 var_dump($john->age; 
 
+// Public methods can be accessed and modified at any time
+
 // Private methods means method can only be accessed within its class. 
 
 // Protected methods can be extended to subclasses. So a child class has the ability to access protected classes.  
