@@ -1,6 +1,6 @@
 <?php
 
-// Think of an interface as a contract. Lays down the terms for what any implementation must adher to 
+// Think of an interface as a contract. Lays down the terms for what any implementation must adhere to 
 // interface Animal {
 //   public function communicate();
 // }
@@ -40,7 +40,8 @@ class LogToDatabase implements Logger {
   }
 }
 
-
+// Program to an interface, not an implementaion. 
+// Notice construct is accepting an interface as an argument as opposed to hard coding in the specific instance of the method you want to use. 
 
 class UsersController {
   protected $logger;
