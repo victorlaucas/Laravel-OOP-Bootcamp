@@ -1,52 +1,8 @@
 <?php
 
-class Person {
-  protected $name;
-
-  public function __construct($name)
-  {
-    $this->name = $name;
-  }
-}
-
-class Business {
-  protected $staff;
-
-  public function __construct(Staff $staff)
-  {
-    $this->staff = $staff;
-  }
-
-  // Called type hinting when a class is passed in as an argument 
-  public function hire(Person $person)
-  {
-    $this->staff->add($person);
-  }
-
-  public function getStaffMembers()
-  {
-    return $this->staff->members();
-  }
-}
-
-class Staff {
-  protected $members = [];
-
-  public function __construct($members = [])
-  {
-    $this->members = $members;
-  }
-
-  public function add(Person $person)
-  {
-    $this->members[] = $person;
-  }
-
-  public function members()
-  {
-    return $this->members;
-  }
-}
+use Acme\Users\Person;
+use Acme\Business;
+use Acme\Staff;
 
 $victor = new Person('Victor Laucas');
 
